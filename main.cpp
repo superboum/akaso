@@ -11,6 +11,7 @@ int main()
     sf::RenderWindow App(sf::VideoMode(800, 450, 32), "Akaso");
 
     loader currentLoader;
+    currentLoader.loadDebugRessources();
 
     // Start game loop
     while (App.IsOpened())
@@ -24,9 +25,12 @@ int main()
                 App.Close();
         }
 
-        // Clear the screen (fill it with black color)
+        // Clear the screen (fill it with gray color)
         App.Clear(sf::Color(50, 50, 50));
 
+        sf::Image test = currentLoader.getImageRessource(0);
+        sf::Sprite test2(test);
+        App.Draw(test2);
         // Display window contents on screen
         App.Display();
     }

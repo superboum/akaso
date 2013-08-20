@@ -12,7 +12,8 @@ class loader
 {
 public:
     loader();
-
+    void loadDebugRessources();
+    sf::Image getImageRessource(int pId);
 private:
     std::vector<ressource> imageBox;
 };

@@ -9,6 +9,14 @@
 loader::loader()
 {
     std::cout << "[DEBUG] Creating a new loader" << std::endl;
-    ressource one(1, "ressources/ground.png");
-    imageBox.push_back(one);
+}
+
+void loader::loadDebugRessources()
+{
+    imageBox.push_back(ressource(imageBox.size(), "ressources/ground.png"));
+}
+
+sf::Image loader::getImageRessource(int pId)
+{
+    return imageBox[pId].getContent();
 }
