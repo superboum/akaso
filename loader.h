@@ -8,14 +8,14 @@
 
 #include "ressource.h"
 
-class loader
+class Loader
 {
 public:
-    loader();
-    void loadDebugRessources();
+    Loader();
+    int loadRessource(std::string pPath);
     sf::Image getImageRessource(int pId);
 private:
-    std::vector<ressource> imageBox;
+    std::vector<Ressource> imageBox;
 };
 
 #endif // LOADER_H

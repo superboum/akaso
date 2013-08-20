@@ -3,27 +3,27 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
 
-ressource::ressource(int pId, std::string pPath) : id(pId), path(pPath)
+Ressource::Ressource(int pId, std::string pPath) : id(pId), path(pPath)
 {
     std::cout << "[DEBUG] Creating a new ressource" << std::endl;
     load();
 }
 
-void ressource::load()
+void Ressource::load()
 {
     if (!content.LoadFromFile(path)) {
         std::cout << "[ERROR] Unable to load the following ressource : " << path << std::endl;
     } else {
-        std::cout << "[SUCCESS] The following ressource was successfully loaded : " << path << std::endl;
+        std::cout << "[DEBUG] The following ressource was successfully loaded : " << path << std::endl;
     }
 }
 
-int ressource::getId()
+int Ressource::getId()
 {
     return id;
 }
 
-sf::Image ressource::getContent()
+sf::Image Ressource::getContent()
 {
     return content;
 }

@@ -6,17 +6,19 @@
 
 #include "ressource.h"
 
-loader::loader()
+Loader::Loader()
 {
     std::cout << "[DEBUG] Creating a new loader" << std::endl;
 }
 
-void loader::loadDebugRessources()
+int Loader::loadRessource(std::string pPath)
 {
-    imageBox.push_back(ressource(imageBox.size(), "ressources/ground.png"));
+    int generatedId = imageBox.size();
+    imageBox.push_back(Ressource(generatedId, pPath));
+    return generatedId;
 }
 
-sf::Image loader::getImageRessource(int pId)
+sf::Image Loader::getImageRessource(int pId)
 {
     return imageBox[pId].getContent();
 }

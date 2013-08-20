@@ -4,10 +4,10 @@
 #include <string>
 #include <SFML/Graphics.hpp>
 
-class ressource
+class Ressource
 {
 public:
-    ressource(int pId, std::string pPath);
+    Ressource(int pId, std::string pPath);
     void load();
     int getId();
     sf::Image getContent();
