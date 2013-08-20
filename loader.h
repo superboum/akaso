@@ -4,12 +4,17 @@
 #include <vector>
 #include <string>
 
+#include <SFML/Graphics.hpp>
+
+#include "ressource.h"
+
 class loader
 {
 public:
     loader();
+
 private:
-    std::vector<std::string> ImageList;
+    std::vector<ressource> imageBox;
 };
 
 #endif // LOADER_H

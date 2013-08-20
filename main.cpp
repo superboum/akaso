@@ -1,10 +1,16 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 
+#include "loader.h"
+
 int main()
 {
+    std::cout << std::endl << "************************" << std::endl << "* AKASO - EXPERIMENTAL *" << std::endl << "************************" << std::endl << std::endl;
+
     // Create the main rendering window
     sf::RenderWindow App(sf::VideoMode(800, 450, 32), "Akaso");
+
+    loader currentLoader;
 
     // Start game loop
     while (App.IsOpened())
