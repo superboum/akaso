@@ -13,11 +13,14 @@ class Square
 public:
     Square();
     Square(Loader *pImageLoader, int pRessourceId, int pSquareId);
-    void draw(sf::RenderWindow* App);
+    void draw(sf::RenderWindow* App, int posX, int posY);
 private:
     Loader *imageLoader;
     int ressourceId;
     int squareId;
+
+    int getSquareX();
+    int getSquareY();
 };
 
 #endif // SQUARE_H
