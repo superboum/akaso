@@ -17,7 +17,7 @@ int Loader::loadRessource(std::string pPath)
     int generatedId = imageBox.size();
     imageBox.push_back(Ressource(generatedId, pPath));
 
-    std::cout << "[DEBUG] " << pPath << " is stored at id: " << generatedId << std::endl;
+    std::cout << "[DEBUG] Loader stored the ressource " << pPath << " at id " << generatedId << std::endl;
 
     return generatedId;
 }

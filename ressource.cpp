@@ -5,7 +5,7 @@
 
 Ressource::Ressource(int pId, std::string pPath) : id(pId), path(pPath)
 {
-    std::cout << "[DEBUG] Creating a new ressource" << std::endl;
+    std::cout << "[DEBUG] Creating a new ressource from: " << pPath << std::endl;
     load();
 }
 
