@@ -13,8 +13,12 @@ Loader::Loader()
 
 int Loader::loadRessource(std::string pPath)
 {
+    //@todo check if the ressource is not already loaded...
     int generatedId = imageBox.size();
     imageBox.push_back(Ressource(generatedId, pPath));
+
+    std::cout << "[DEBUG] " << pPath << " is stored at id: " << generatedId << std::endl;
+
     return generatedId;
 }
 

@@ -2,16 +2,19 @@
 #include <iostream>
 
 #include "loader.h"
+#include "map.h"
 
 int main()
 {
-    std::cout << std::endl << "************************" << std::endl << "* AKASO - EXPERIMENTAL *" << std::endl << "************************" << std::endl << std::endl;
+    std::cout << std::endl << "┌──────────────────────┐" << std::endl << "│ AKASO - EXPERIMENTAL │" << std::endl << "└──────────────────────┘" << std::endl;
 
     // Create the main rendering window
     sf::RenderWindow App(sf::VideoMode(800, 450, 32), "Akaso");
 
     Loader currentLoader;
-    currentLoader.loadRessource("ressources/ground.png");
+
+    Map currentMap(&currentLoader);
+    currentMap.loadMapTest();
 
     // Start game loop
     while (App.IsOpened())
