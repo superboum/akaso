@@ -2,7 +2,7 @@
 #include <iostream>
 
 #include "loader.h"
-#include "map.h"
+#include "chunk.h"
 
 int main()
 {
@@ -13,8 +13,8 @@ int main()
 
     Loader currentLoader;
 
-    Map currentMap(&currentLoader);
-    currentMap.loadMapTest();
+    Chunk currentChunk(&currentLoader);
+    currentChunk.loadTestChunk();
 
     // Start game loop
     while (App.IsOpened())
