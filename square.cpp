@@ -1,6 +1,8 @@
 #include "square.h"
 #include <SFML/Graphics.hpp>
 
+#include <iostream>
+
 Square::Square()
 {
 }
@@ -16,6 +18,8 @@ void Square::draw(sf::RenderWindow* App, int posX, int posY)
 
     sf::Sprite currentSprite;
     currentSprite.SetImage(ressource);
+
+    //Seems working with debug.png
     currentSprite.SetPosition((float)(posX * 31), (float)(posY * 31));
     currentSprite.SetSubRect(sf::IntRect(1 + getSquareX(), 1 + getSquareY(), 32 + getSquareX(), 32 + getSquareY()));
 
