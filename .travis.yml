@@ -1,8 +1,19 @@
 language: cpp
+
 compiler:
   - gcc
   - clang
+
 before_install:
  - sudo apt-get update -qq
- - sudo apt-get install -qq libsfml-audio1.6 libsfml-graphics1.6 libsfml-network1.6 libsfml-system1.6 libsfml-window1.6 
+
+   # If there is no graphical interface
+ - sudo apt-get install -qq mesa-common-dev libglu1-mesa-dev
+
+   # Needed to compile
+ - sudo apt-get install -qq libsfml-dev
+
+   # Normal dependencies
+ - sudo apt-get install -qq libsfml-audio1.6 libsfml-graphics1.6 libsfml-network1.6 libsfml-system1.6 libsfml-window1.6
+
 script: cmake . && make
