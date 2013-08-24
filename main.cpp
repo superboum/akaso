@@ -4,6 +4,9 @@
 #include "util/init.h"
 #include "util/loader.h"
 
+#include "view/cameraobservable.h"
+#include "view/worldcamera.h"
+
 int main()
 {
     std::cout << std::endl << "┌──────────────────────┐" << std::endl << "│ AKASO - early dev    │" << std::endl << "└──────────────────────┘" << std::endl;
@@ -13,6 +16,8 @@ int main()
     // Create the main rendering window
     Init base;
     sf::RenderWindow* App = base.getApp();
+
+    WorldCamera worldCamera;
 
     std::cout << "[DEBUG] Game is ready" << std::endl;
     // Start game loop
@@ -25,6 +30,8 @@ int main()
             // Close window : exit
             if (Event.Type == sf::Event::Closed)
                 App->Close();
+            else if (Event.Type == sf::Event::Resized)
+                base.getCameraObservable()->windowResized();
         }
 
         // Clear the screen (fill it with gray color)
@@ -32,6 +39,7 @@ int main()
 
         //MOVING VIEW
         //@todo implement camera
+        App->SetView(*worldCamera.getView());
 
         //Draw the map
         // (Will be replaced with map - Currently testing a single chunk)

@@ -4,6 +4,7 @@
 
 #include "loader.h"
 #include "../map/chunk.h"
+#include "../view/cameraobservable.h"
 
 Init::Init()
 {
@@ -26,4 +27,9 @@ Loader* Init::getImageLoader()
 Chunk* Init::getCurrentChunk()
 {
     return &currentChunk;
+}
+
+CameraObservable* Init::getCameraObservable()
+{
+    return &mainCameraObservable;
 }
