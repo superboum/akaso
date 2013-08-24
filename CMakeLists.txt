@@ -5,7 +5,7 @@ aux_source_directory(. SRC_LIST)
 #set(CMAKE_CXX_FLAGS "-lsfml-audio -lsfml-graphics -lsfml-window -lsfml-network -lsfml-system")
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "build/")
 set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake_modules")
-set(CMAKE_CXX_FLAGS "-Wall -W -Werror -ansi -pedantic -g")
+#set(CMAKE_CXX_FLAGS "-Wall -W -Werror -ansi -pedantic -g")
 
 find_package(SFML REQUIRED)
 
