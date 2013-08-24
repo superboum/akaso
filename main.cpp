@@ -38,7 +38,7 @@ int main()
         base.getCurrentChunk()->draw(base.getApp());
 
         //STATIC VIEW :
-        App.SetView(App.GetDefaultView());
+        App->SetView(App->GetDefaultView());
 
         //Draw the interface
         //@todo implement
