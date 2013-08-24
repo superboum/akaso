@@ -3,7 +3,7 @@
 #include <SFML/Graphics.hpp>
 
 #include "loader.h"
-#include "chunk.h"
+#include "../map/chunk.h"
 
 Init::Init()
 {

@@ -3,7 +3,7 @@ akaso
 
 C++ &amp; SFML powered game
 
-[![Build Status](http://travis-ci.org/superboum/akaso.png)](http://travis-ci.org/superboum/akaso)
+[![Build Status](https://travis-ci.org/superboum/akaso.png?branch=master)](https://travis-ci.org/superboum/akaso)
 
 Installation
 ------------

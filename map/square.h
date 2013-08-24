@@ -1,7 +1,7 @@
 #ifndef SQUARE_H
 #define SQUARE_H
 
-#include "loader.h"
+#include "../util/loader.h"
 #include <SFML/Graphics.hpp>
 
 /**

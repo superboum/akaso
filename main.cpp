@@ -1,8 +1,8 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 
-#include "init.h"
-#include "loader.h"
+#include "util/init.h"
+#include "util/loader.h"
 
 int main()
 {
@@ -30,9 +30,18 @@ int main()
         // Clear the screen (fill it with gray color)
         App->Clear(sf::Color(50, 50, 50));
 
-        //Draw the maps
-        // (Will be replaced with maps - Currently testing a single chunk)
+        //MOVING VIEW
+        //@todo implement camera
+
+        //Draw the map
+        // (Will be replaced with map - Currently testing a single chunk)
         base.getCurrentChunk()->draw(base.getApp());
+
+        //STATIC VIEW :
+        App.SetView(App.GetDefaultView());
+
+        //Draw the interface
+        //@todo implement
 
         // Display window contents on screen
         App->Display();

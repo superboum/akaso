@@ -3,7 +3,7 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
 
-#include "loader.h"
+#include "../util/loader.h"
 #include "square.h"
 
 Chunk::Chunk()
