@@ -7,7 +7,7 @@ class AbstractCamera
 {
 public:
     AbstractCamera();
-    virtual void configuration() = 0;
+    virtual void setResolution(int x, int y) = 0;
     sf::View* getView();
 protected:
     sf::View view;

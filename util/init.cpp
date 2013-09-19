@@ -5,13 +5,22 @@
 #include "loader.h"
 #include "../map/chunk.h"
 #include "../view/cameraobservable.h"
+#include "../view/worldcamera.h"
 
 Init::Init()
 {
-    mainWindow = new sf::RenderWindow(sf::VideoMode(800, 450, 32), "Akaso");
+    Init(800,450);
+}
+
+Init::Init(int resx, int resy)
+{
+    mainWindow = new sf::RenderWindow(sf::VideoMode(resx, resy, 32), "Akaso");
 
     currentChunk.setImageLoader(&imageLoader);
     currentChunk.loadTestChunk();
+
+    mainCameraObservable.registerCamera(&mainWorldCamera);
+    mainCameraObservable.windowResized(resx, resy);
 }
 
 sf::RenderWindow* Init::getApp()
@@ -32,4 +41,9 @@ Chunk* Init::getCurrentChunk()
 CameraObservable* Init::getCameraObservable()
 {
     return &mainCameraObservable;
+}
+
+WorldCamera* Init::getWorldCamera()
+{
+    return &mainWorldCamera;
 }

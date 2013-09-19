@@ -31,12 +31,15 @@ void Chunk::loadTestChunk()
 {
     std::srand ( std::time(NULL) );
     int res = imageLoader->loadRessource("ressources/ground.png");
-    //grid[0][0] = Square(imageLoader, res, 15);
+//    grid[0][0] = Square(imageLoader, res, 2);
+//    grid[1][0] = Square(imageLoader, res, 16);
+//    grid[0][1] = Square(imageLoader, res, 3);
+//    grid[1][1] = Square(imageLoader, res, 32);
     for (int i=0; i < 26; i++)
     {
         for (int j=0; j < 26; j++)
         {
-            int random = std::rand() % 15;
+            int random = std::rand() % 63;
             grid[i][j] = Square(imageLoader, res, random);
         }
     }
