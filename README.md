@@ -8,12 +8,12 @@ C++ &amp; SFML powered game
 Installation
 ------------
 
-You need the sfml library version 1.6 (Graphics and audio).
+You need the sfml library version 2.0 or 2.1.
 You can find it in your package manager.
 
 On debian like distros :
 ``` bash
-$ sudo apt-get install libsfml-audio1.6 libsfml-graphics1.6 libsfml-network1.6 libsfml-system1.6 libsfml-window1.6 libsfml-dev
+$ sudo apt-get install libsfml libsfml-dev 
 ```
 
 Just clone the repository and execute :

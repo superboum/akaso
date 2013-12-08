@@ -37,8 +37,8 @@ int main()
             }
             else if (event.type == sf::Event::KeyPressed)
             {
-                base.getCameraObservable()->move(10,10);
-                std::cout << "[DEBUG] A key is pressed" << std::endl;
+                base.getCameraObservable()->move(3,3);
+                //std::cout << "[DEBUG] A key is pressed" << std::endl;
             }
         }
 

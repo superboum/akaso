@@ -6,10 +6,12 @@ aux_source_directory(./map SRC_LIST)
 aux_source_directory(./util SRC_LIST)
 aux_source_directory(./view SRC_LIST)
 
-#set(CMAKE_CXX_FLAGS "-lsfml-audio -lsfml-graphics -lsfml-window -lsfml-network -lsfml-system")
+
+#set(DCMAKE_C_COMPILER "/usr/bin/clang")
+#set(DCMAKE_CXX_COMPILER "/usr/bin/clang++")
+
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "build")
 set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake_modules")
-#set(CMAKE_CXX_FLAGS "-Wall -W -Werror -ansi -pedantic -g")
 
 find_package(SFML REQUIRED)
 

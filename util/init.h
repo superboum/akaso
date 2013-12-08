@@ -4,7 +4,7 @@
 #include <SFML/Graphics.hpp>
 
 #include "loader.h"
-#include "../controller/listener.h"
+#include "../controller/commander.h"
 #include "../map/chunk.h"
 #include "../view/cameraobservable.h"
 #include "../view/worldcamera.h"
@@ -24,7 +24,7 @@ private:
     Loader imageLoader;
     Chunk currentChunk;
     CameraObservable mainCameraObservable;
-    Listener mainListener;
+    Commander mainCommander;
     WorldCamera mainWorldCamera;
 };
 

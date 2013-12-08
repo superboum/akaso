@@ -1,8 +1,9 @@
 #ifndef SQUARE_H
 #define SQUARE_H
 
-#include "../util/loader.h"
 #include <SFML/Graphics.hpp>
+
+#include "../util/loader.h"
 
 /**
  * @brief The Square class
