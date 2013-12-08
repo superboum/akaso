@@ -5,7 +5,7 @@ compiler:
 #  - clang
 
 before_install:
- - sudo apt-add-repository ppa:sonkun/sfml-stable
+ - sudo apt-add-repository -y ppa:sonkun/sfml-stable
 
  - sudo apt-get update -qq
 
