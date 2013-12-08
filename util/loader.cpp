@@ -1,10 +1,10 @@
-#include "loader.h"
+#include "loader.hpp"
 
 #include <iostream>
 #include <vector>
 #include <SFML/Graphics.hpp>
 
-#include "ressource.h"
+#include "ressource.hpp"
 
 Loader::Loader()
 {

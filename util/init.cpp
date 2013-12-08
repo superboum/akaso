@@ -1,11 +1,11 @@
-#include "init.h"
+#include "init.hpp"
 
 #include <SFML/Graphics.hpp>
 
-#include "loader.h"
-#include "../map/chunk.h"
-#include "../view/cameraobservable.h"
-#include "../view/worldcamera.h"
+#include "loader.hpp"
+#include "../map/chunk.hpp"
+#include "../view/cameraobservable.hpp"
+#include "../view/worldcamera.hpp"
 
 Init::Init()
 {

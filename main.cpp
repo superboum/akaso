@@ -1,11 +1,11 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 
-#include "util/init.h"
-#include "util/loader.h"
+#include "util/init.hpp"
+#include "util/loader.hpp"
 
-#include "view/cameraobservable.h"
-#include "view/worldcamera.h"
+#include "view/cameraobservable.hpp"
+#include "view/worldcamera.hpp"
 
 int main()
 {

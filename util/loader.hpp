@@ -6,7 +6,7 @@
 
 #include <SFML/Graphics.hpp>
 
-#include "ressource.h"
+#include "ressource.hpp"
 
 class Loader
 {

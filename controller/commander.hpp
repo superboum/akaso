@@ -5,6 +5,8 @@ class Commander
 {
 public:
     Commander();
+private:
+    
 };
 
 #endif // COMMANDER_H

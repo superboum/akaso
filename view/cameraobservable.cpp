@@ -1,4 +1,4 @@
-#include "cameraobservable.h"
+#include "cameraobservable.hpp"
 
 #include <iostream>
 

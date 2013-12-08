@@ -1,8 +1,8 @@
-#include "abstractcamera.h"
+#include "abstractcamera.hpp"
 
 #include <SFML/Graphics.hpp>
 
-#include "cameraobservable.h"
+#include "cameraobservable.hpp"
 
 AbstractCamera::AbstractCamera()
 {

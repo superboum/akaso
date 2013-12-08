@@ -1,4 +1,4 @@
-#include "ressource.h"
+#include "ressource.hpp"
 
 #include <iostream>
 #include <SFML/Graphics.hpp>

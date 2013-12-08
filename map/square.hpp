@@ -3,7 +3,7 @@
 
 #include <SFML/Graphics.hpp>
 
-#include "../util/loader.h"
+#include "../util/loader.hpp"
 
 /**
  * @brief The Square class

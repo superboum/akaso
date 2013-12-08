@@ -3,7 +3,7 @@
 
 #include <vector>
 
-#include "abstractcamera.h"
+#include "abstractcamera.hpp"
 
 class CameraObservable
 {

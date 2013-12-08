@@ -1,7 +1,7 @@
 #ifndef WORLDCAMERA_H
 #define WORLDCAMERA_H
 
-#include "abstractcamera.h"
+#include "abstractcamera.hpp"
 
 class WorldCamera: public AbstractCamera
 {

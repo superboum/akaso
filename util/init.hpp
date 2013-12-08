@@ -3,11 +3,11 @@
 
 #include <SFML/Graphics.hpp>
 
-#include "loader.h"
-#include "../controller/commander.h"
-#include "../map/chunk.h"
-#include "../view/cameraobservable.h"
-#include "../view/worldcamera.h"
+#include "loader.hpp"
+#include "../controller/commander.hpp"
+#include "../map/chunk.hpp"
+#include "../view/cameraobservable.hpp"
+#include "../view/worldcamera.hpp"
 
 class Init
 {

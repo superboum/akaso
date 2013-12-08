@@ -4,8 +4,8 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
 
-#include "../util/loader.h"
-#include "square.h"
+#include "../util/loader.hpp"
+#include "square.hpp"
 
 class Chunk
 {
