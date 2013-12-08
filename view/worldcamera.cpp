@@ -5,17 +5,21 @@
 WorldCamera::WorldCamera()
 {
     std::cout << "[DEBUG] Creating a new World Camera" << std::endl;
-    view.SetCenter(0, 0);
-    view.SetHalfSize(0, 0);
+    view.setCenter(sf::Vector2f(900, 100));
+    //view.setSize(sf::Vector2f(1000, 1000));
 }
 
 void WorldCamera::setResolution(int x, int y)
 {
-    view.SetHalfSize(x/2, y/2);
+    view.setSize(sf::Vector2f(x, y));
 }
 
 void WorldCamera::setPosition(int x, int y)
 {
-    view.SetCenter(x, y);
+    view.setCenter(sf::Vector2f(x, y));
 }
 
+void WorldCamera::setMovement(int x, int y)
+{
+    view.move(sf::Vector2f(x, y));
+}

@@ -10,24 +10,24 @@ Square::Square()
 Square::Square(Loader *pImageLoader, int pRessourceId, int pSquareId) : ressourceId(pRessourceId), squareId(pSquareId)
 {
     imageLoader = pImageLoader;
+    ressource = imageLoader->getImageRessource(ressourceId);
 }
 
 void Square::draw(sf::RenderWindow* App, int posX, int posY)
 {
-    sf::Image ressource = imageLoader->getImageRessource(ressourceId);
+    //Hack, texture problem
+    currentSprite.setTexture(ressource);
+    
+    //Position & crop
+    currentSprite.setPosition(sf::Vector2f(posX * 32, posY * 32));
+    currentSprite.setTextureRect(sf::IntRect(0 + getSquareX(), 0 + getSquareY(), 32, 32));
 
-    sf::Sprite currentSprite;
-    currentSprite.SetImage(ressource);
-
-    //Seems working with debug.png
-    currentSprite.SetPosition((float)(posX * 31), (float)(posY * 31));
-    currentSprite.SetSubRect(sf::IntRect(1 + getSquareX(), 1 + getSquareY(), 32 + getSquareX(), 32 + getSquareY()));
-
-    App->Draw(currentSprite);
+    App->draw(currentSprite);
 }
 
 int Square::getSquareX()
 {
+    
     return (squareId * 32) % 256;
 }
 

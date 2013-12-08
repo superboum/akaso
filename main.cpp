@@ -19,48 +19,49 @@ int main()
 
     std::cout << "[DEBUG] Game is ready" << std::endl;
     // Start game loop
-    while (App->IsOpened())
+    while (App->isOpen())
     {
 
         // Process events
-        sf::Event Event;
-        while (App->GetEvent(Event))
+        sf::Event event;
+        while (App->pollEvent(event))
         {
             // Close window : exit
-            if (Event.Type == sf::Event::Closed)
+            if (event.type == sf::Event::Closed)
             {
-                App->Close();
+                App->close();
             }
-            else if (Event.Type == sf::Event::Resized)
+            else if (event.type == sf::Event::Resized)
             {
-                base.getCameraObservable()->windowResized(Event.Size.Width, Event.Size.Height);
+                base.getCameraObservable()->windowResized(event.size.width, event.size.height);
             }
-            else if (Event.Type == sf::Event::KeyPressed)
+            else if (event.type == sf::Event::KeyPressed)
             {
-                std::cout << "test" << std::endl;
+                base.getCameraObservable()->move(10,10);
+                std::cout << "[DEBUG] A key is pressed" << std::endl;
             }
         }
 
         // Clear the screen (fill it with gray color)
-        App->Clear(sf::Color(50, 50, 50));
+        App->clear(sf::Color(50, 50, 50));
 
         //MOVING VIEW
 
         //App->SetView(*worldCamera.getView());
-        App->SetView(*base.getWorldCamera()->getView());
+        App->setView(*base.getWorldCamera()->getView());
 
         //Draw the map
         // (Will be replaced with map - Currently testing a single chunk)
         base.getCurrentChunk()->draw(base.getApp());
 
         //STATIC VIEW :
-        App->SetView(App->GetDefaultView());
+        App->setView(App->getDefaultView());
 
         //Draw the interface
         //@todo implement
 
         // Display window contents on screen
-        App->Display();
+        App->display();
     }
 
     return EXIT_SUCCESS;

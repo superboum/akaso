@@ -14,3 +14,12 @@
 
 # Build folder
 build/
+
+# Temporary Files
+*~
+
+# CmakeFiles
+Makefile
+CMakeCache.txt
+CMakeFiles/*
+CMakeLists.txt.user

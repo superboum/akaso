@@ -10,11 +10,11 @@ public:
     Ressource(int pId, std::string pPath);
     void load();
     int getId();
-    sf::Image getContent();
+    sf::Texture getContent();
 private:
     int id;
     std::string path;
-    sf::Image content;
+    sf::Texture content;
 };
 
 #endif // RESSOURCE_H

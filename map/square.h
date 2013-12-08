@@ -16,6 +16,9 @@ public:
     void draw(sf::RenderWindow* App, int posX, int posY);
 private:
     Loader *imageLoader;
+    sf::Sprite currentSprite;
+    sf::Texture ressource;
+    
     int ressourceId;
     int squareId;
 

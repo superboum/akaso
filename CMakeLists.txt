@@ -1,6 +1,7 @@
 project(akaso)
 cmake_minimum_required(VERSION 2.8)
 aux_source_directory(. SRC_LIST)
+aux_source_directory(./controller SRC_LIST)
 aux_source_directory(./map SRC_LIST)
 aux_source_directory(./util SRC_LIST)
 aux_source_directory(./view SRC_LIST)

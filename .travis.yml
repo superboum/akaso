@@ -5,15 +5,17 @@ compiler:
 #  - clang
 
 before_install:
+ - sudo apt-add-repository ppa:sonkun/sfml-stable
+
  - sudo apt-get update -qq
 
    # If there is no graphical interface
  - sudo apt-get install -qq mesa-common-dev libglu1-mesa-dev
 
    # Needed to compile
- - sudo apt-get install -qq libsfml-dev libsfml1.6-dbg
+ - sudo apt-get install -qq libsfml-dev libsfml-dbg
 
    # Normal dependencies
- - sudo apt-get install -qq libsfml-audio1.6 libsfml-graphics1.6 libsfml-network1.6 libsfml-system1.6 libsfml-window1.6
+ - sudo apt-get install -qq libsfml 
 
 script: cmake . && make

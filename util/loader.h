@@ -13,7 +13,7 @@ class Loader
 public:
     Loader();
     int loadRessource(std::string pPath);
-    sf::Image getImageRessource(int pId);
+    sf::Texture getImageRessource(int pId);
 private:
     std::vector<Ressource> imageBox;
 };

@@ -22,7 +22,7 @@ int Loader::loadRessource(std::string pPath)
     return generatedId;
 }
 
-sf::Image Loader::getImageRessource(int pId)
+sf::Texture Loader::getImageRessource(int pId)
 {
     return imageBox[pId].getContent();
 }

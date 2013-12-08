@@ -31,10 +31,10 @@ void Chunk::loadTestChunk()
 {
     std::srand ( std::time(NULL) );
     int res = imageLoader->loadRessource("ressources/ground.png");
-//    grid[0][0] = Square(imageLoader, res, 2);
-//    grid[1][0] = Square(imageLoader, res, 16);
-//    grid[0][1] = Square(imageLoader, res, 3);
-//    grid[1][1] = Square(imageLoader, res, 32);
+    //grid[0][0] = Square(imageLoader, res, 2);
+    //grid[1][0] = Square(imageLoader, res, 16);
+    //grid[0][1] = Square(imageLoader, res, 3);
+    //grid[1][1] = Square(imageLoader, res, 32);
     for (int i=0; i < 26; i++)
     {
         for (int j=0; j < 26; j++)
@@ -47,7 +47,7 @@ void Chunk::loadTestChunk()
 
 void Chunk::draw(sf::RenderWindow* App)
 {
-//    grid[0][0].draw(App);
+    //grid[0][0].draw(App,0,0);
 
     for (int i=0; i < 26; i++)
     {
